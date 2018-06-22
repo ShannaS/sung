@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Popover Plugin</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
+</head>
+<body>
+	<div class="container">
+		<h3>Popover Example</h3>
+		<a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Toggle Popover</a>
+		<h3>Popover Position Example</h3>
+		<ul class="list-inline">
+			<li><a href="#" data-toggle="popover" data-placement="top" data-trigger="focus" title="Popover Header" data-content="Top!">Top!</a></li>
+			<li><a href="#" data-toggle="popover" data-placement="left" data-trigger="focus" title="Popover Header" data-content="Left!">Left!</a></li>
+			<li><a href="#" data-toggle="popover" data-placement="right" data-trigger="focus" title="Popover Header" data-content="Right!">Right!</a></li>
+			<li><a href="#" data-toggle="popover" data-placement="bottom" data-trigger="focus" title="Popover Header" data-content="Bottom!">Bottom!</a></li>
+		</ul>
+		<h3>Data-trigger="hover"</h3>
+		<a href="#" data-toggle="popover" data-trigger="hover" title="Hover Header" data-content="data-trigger=hover">Hover</a>
+
+		<ul class="pager">
+			<li class="previous"><a href="tooltip.html">Previous</a></li>
+			<li class="next"><a href="scrollspy.html">Next</a></li>
+		</ul>
+	</div>
+
+
+
+	<script>
+		$(document).ready(function(){
+			$('[data-toggle="popover"]').popover();
+		});
+	</script>
+
+</body>
+</html>

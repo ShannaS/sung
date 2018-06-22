@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Modal Plugin</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>		
+</head>
+<body>
+	<div class="container">
+		<h3>Modal Example 1</h3>
+		<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+		<!--Modal-->
+		<div class="modal fade" id="myModal" role="dialog">
+			<div class="modal-dialog"></div>
+		<!--Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"> &times; </button>
+					<h4 class="modal-tittle">Modal Header</h4>
+				</div>
+				<div class="modal-body">
+					<p>Some text in the modal.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<h3>Example 2</h3>
+		<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#youModal">Click</button>
+		<!--Model Plugin-->
+		<div class="modal fade" id="youModal" role="dialog">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4>Where did you go yesterday night?</h4>
+					</div>
+					<div class="modal-body">
+						<p>I had a dinner with Japanese who were SEGA employees.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>			
+			</div>
+		</div>
+		<ul class="pager">
+			<li class="previous"><a href="carouselplugin.html">Previous</a></li>
+			<li class="next"><a href="tooltip.html">Next</a></li>
+		</ul>
+	</div>
+
+	<nav class="navbar navbar-inverse navbar-fixed-bottom">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html">Bottom</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li><a href="#">One</a></li>
+				<li><a href="#">Two</a></li>
+				<li><a href="#">Three</a></li>
+				<li><a href="#">Four</a></li>
+				<li><a href="index.html">Index</a></li>
+				<li><a href="navbar1.html">Previous</a></li>
+				<li><a href="#">Next</a></li>
+			</ul>
+			<div class="nav navbar-nav navbar-right">
+				<li><a href="#"> <span class="glyphicon glyphicon-user"></span> Sign in </a></li>
+				<li><a href="#"> <span class="glyphicon glyphicon-log-in"></span> Login </a></li>
+			</div>
+		</div>
+	</nav>
+
+
+		
+
+
+</body>
+</html>

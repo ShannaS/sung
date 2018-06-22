@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Filter Table - Example</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h3>Filterable Dropdown</h3>
+		<p>Open the dropdown menu and type something in the input field to search for dropdown items:</p>
+		<p>Note that we have styled the input field to fit the dropdown items.</p>
+		<div class="dropdown">
+			<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example <span class="caret"></span></button>
+			<ul class="dropdown-menu">
+				<input type="text" class="form-control" id="myInput_dropdown" placeholder="Search..">
+				<li><a href="#">HTML</a></li>
+				<li><a href="#">CSS</a></li>
+				<li><a href="#">Javascript</a></li>
+				<li><a href="#">jQuery</a></li>
+				<li><a href="#">Bootstrap</a></li>
+				<li><a href="#">Angular</a></li>
+			</ul>
+		</div>
+		<hr>
+		<h3>Filterable Table</h2>
+		<p>Type something in the input field to search the table for first names, last names or emails:</p>
+		<input type="text" class="form-control" id="myInput" placeholder="Search">
+		<br>
+		<table class="table table-bordered table-striped">
+			<thead>
+				<tr>
+					<th>Firste</th>
+					<th>Lastname</th>
+					<th>Email</th>
+				</tr>
+			</thead>
+			<tbody id="myTable">
+				<tr>
+					<td>John</td>
+					<td>Doe</td>
+					<td>john@example.com</td>
+				</tr>
+				<tr>
+					<td>Mary</td>
+					<td>Moe</td>
+					<td>marry@example.com</td>
+				</tr>
+				<tr>
+					<td>July</td>
+					<td>Dooley</td>
+					<td>july@example.com</td>
+				</tr>
+				<tr>
+					<td>Alna</td>
+					<td>Roland</td>
+					<td>alna.roland@example.com</td>
+				</tr>
+				<tr>
+					<td>Jerry</td>
+					<td>Lai</td>
+					<td>jerry@gmail.com</td>
+				</tr>
+				<tr>
+					<td>Winnie</td>
+					<td>Chang</td>
+					<td>hahahawinniebear@max.com.tw</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>Note that we start the search in tbody, to prevent filtering the table headers.</p>
+		<hr>
+		<h3>Filterable List</h3>
+		<p>Type something in the input field to search the list for specific items:</p>
+		<input type="text" class="form-control" id="myInput_list" placeholder="Search...">
+		<br>
+		<ul class="list-group" id="myList">
+			<li class="list-group-item">First item</li>
+			<li class="list-group-item">Second item</li>
+			<li class="list-group-item">Third item</li>
+			<li class="list-group-item">Fourth item</li>
+			<li class="list-group-item">Fifth item</li>
+		</ul>
+		<hr>
+		<h3>Filter Anything</h3>
+		<p>Typt something in the inpur field to search for a specific text inside the div element with id="myDIV"</p>
+		<input type="text" class="form-control" id="myInput_anything" placeholder="Search..">
+		<div id="myDIV">
+			<p>I am a paragraph.</p>
+			<div>I am a div element inside div.</div>
+			<button class="btn btn-sm btn-info">I am a button</button>
+			<button class="btn btn-sm btn-danger">Another button</button>
+			<p>Another paragraph</p>
+			<span>I am span....</span>
+		</div>
+		<hr>
+		<div role="pager">
+			<ul class="pager">
+				<li class="previous"><a href="affixplugin2.html">Previous</a></li>
+				<li class="next"><a href="index.html">Last page</a></li>
+			</ul>
+	</div>
+
+
+	</div>
+
+	<script>
+	$(document).ready(function(){
+  		$("#myInput").on("keyup", function() {
+    		var value = $(this).val().toLowerCase();
+    		$("#myTable tr").filter(function() {
+      			$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    		});
+  		});
+	});
+
+	$(document).ready(function(){
+  		$("#myInput_list").on("keyup", function() {
+    		var value = $(this).val().toLowerCase();
+    		$("#myList li").filter(function() {
+      			$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    		});
+  		});
+	});
+
+	$(document).ready(function(){
+  		$("#myInput_dropdown").on("keyup", function() {
+    		var value = $(this).val().toLowerCase();
+    		$(".dropdown-menu li").filter(function() {
+      			$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    		});
+  		});
+	});
+
+	$(document).ready(function(){
+  		$("#myInput_anything").on("keyup", function() {
+    		var value = $(this).val().toLowerCase();
+    		$("#myDIV *").filter(function() {
+      			$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    		});
+  		});
+	});
+	</script>
+
+</body>
+</html>

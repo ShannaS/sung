@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <mata charset="utf-8">
+  <title>Bootstrap - Form</title>
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
+	<!--<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>-->
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+  
+<body style="margin: 20px;">
+
+  <form role="form">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" placeholder="what's your name?">
+    </div>
+    <div class="form-group">
+      <label for="inputfile">Input the Document</label><br>
+      <input type="file" id="inputfile">
+      <p class="help-block">這裡是塊級幫助文本的實例</p>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox"> check
+      </label>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form> <br>
+
+  <form role="form-glyphicon">
+  	<div class="form-group">
+  		<label>Email <span class="glyphicon glyphicon-envelope"></span>: </label>
+  		<input type="text" name="form-control" id="email" placeholder=" email@example.com">
+  		<button class="btn btn-xs"><span class="glyphicon glyphicon-search"></span></button>
+  	</div>
+  	<div class="form-group">
+  		<input type="text" name="form-control" placeholder=" what do you want you know?" style="width:500px;" > 
+  		<a href="#"><span class="glyphicon glyphicon-search"></span></a> <br>
+  		<label>Print this Page</label><br>
+  		<button class="btn btn-danger"><span class="glyphicon glyphicon-print"></span></button>
+  	</div>
+  	
+  </form>
+
+	<hr>
+
+   <form class="form-inline" role="form">
+   	<div class="form-group">
+   		<label class="sr-only" for="name">You're name</label>
+   		<input type="text" class="form-control" id="name" placeholder="Your Name">
+   	</div>
+   	<div class="form-group">
+   		<label class="sr-only" for="inputfile">input documents</label>
+   		<input type="file" id="inputfile">
+   	</div>
+   	<div class="checkbox">
+   		<label>
+   			<input type="checkbox"> check
+   		</label>
+   		<button type="submit" class="btn btn-default">Submit</button>
+   	</div>
+   </form>
+
+	<hr>
+
+   <form class="form-horizontal" role="form">
+   	<div class="form-group">
+   		<label for="firstname" class="col-sm-2 control-label">First Name</label>
+   		<div class="col-sm-10">
+   			<input type="text" class="form-control" id="firstname" placeholder="your firstname">
+   		</div>
+   	</div>
+   	<div class="form-group">
+   		<label for="lastname" class="col-sm-2 control-label">Last Name</label>
+   		<div class="col-sm-10">
+   		<input type="text" class="form-control" id="lastname" placeholder="your lastname">
+   	</div>
+    </div>
+    <div class="form-group">
+    	<div class="col-sm-offset-2 col-sm-10">
+    		<div class="checkbox">
+    			<label>
+    				<input type="checkbox">Remember me
+    			</label>
+    		</div>
+    	</div>
+    </div>
+
+    <div class="form-group">
+    	<div class="col-sm-offset-2 col-sm-10">
+    		<button type="submit" class="btn btn-default">Login</button>
+    	</div>
+    </div>
+   </form>
+
+	<hr>
+
+	<form role="form">
+		<div class="form-group">
+			<label for="name">Label</label>
+			<input type="text" class="form-control" placeholder="fillin">
+		</div>
+	</form>
+
+	<form role="form">
+		<div class="form-group">
+    		<label for="name">文本框</label>
+    		<textarea class="form-control" rows="3"></textarea>
+  		</div>
+	</form>
+
+	<hr>
+
+	<label for="name">默認的複選框和單選按鈕實例</label>
+	<div class="checkbox">
+		<label><input type="checkbox" value="">Option A</label>
+	</div>
+	<div class="checkbox">
+		<label><input type="checkbox" value="">Option B</label>
+	</div>
+	<div class="radio">
+		<label><input type="radio" name="optionsRadios" id="optionsRadios1" value="optionA" checked>Option A</label>
+	</div>
+	<div class="radio">
+		<label><input type="radio" name="optionsRadios" id="optionsRadios2" value="optionB">Option B</label>
+	</div>
+
+	<label for="name">一行式的複選框和單選按鈕的實例</label>
+	<div>
+		<label class="checkbox-inline">
+			<input type="checkbox" id="inlinecheckbox1" value="optionA">Option A
+		</label>
+		<label class="checkbox-inline">
+			<input type="checkbox" id="inlinecheckbox2" value="optionB">Option B
+		</label>
+		<label class="checkbox-inline">
+			<input type="checkbox" id="inlinecheckbox3" value="optionC">Option C
+		</label>
+	</div>
+
+	<div class="radio-inline">
+		<input type="radio" name="optionsRadioinline" id="optionsRadios3" value="option1">Option A
+	</div>
+	<div class="radio-inline">
+		<input type="radio" name="optionsRadioinline" id="optionsRadios4" value="option2">Option B
+	</div>
+	<div class="radio-inline">
+		<input type="radio" name="optionsRadioinline" id="optionsRadios5" value="option3" checked>Option C
+	</div>
+
+	<hr>
+
+	<form role="form">
+		<div class="form-group">
+			<label for="name">單選擇列表</label>
+			<select class="form-control">
+				<option value="">1</option>
+				<option value="">2</option>
+				<option value="">3</option>
+				<option value="">4</option>
+				<option value="">5</option>
+			</select>
+			<label for="name">可多選的選擇列表</label>
+			<select multiple class="form-control">
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+			</select>
+		</div>
+	</form>
+
+	<hr>
+
+	<form class="form-horizontal" role="form">
+	<div class="form-group">
+		<label class="col-sm-2 control-label">Email <span class="glyphicon glyphicon-envelope"></span></label>
+		<div class="col-sm-10">
+			<p class="form-control-static">email@example.com</p>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="inputPassword" class="col-sm-2 control-label">密碼</label>
+		<div class="col-sm-10">
+			<input type="password" class="form-control" id="inputPassword" 
+				   placeholder="password">
+		</div>
+	</div>
+	</form>
+
+	<hr>
+
+	<form class="form-horizontal" role="form">
+		<div class="form-group">
+			<label class="col-sm-2 control-label">FOCUS</label>
+			<div class="col-sm-10"><input class="form-control" id="focusedInput" type="text" value="getting focus before filling in input-box"></div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label">Prohibition</label>
+			<div class="col-sm-10"><input class="form-control" id="disabledInput" type="text" placeholder="forbid filling in any words" disabled></div>
+		</div>
+		<fieldset disabled>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Fieldset disabled</label>
+				<div class="col-sm-10"><input calss="form-control" id="disabledTextInput" placeholder="fieldset disabled"></div>
+			</div>
+		</fieldset>
+		<div class="form-group has-success">
+			<label class="col-sm-2 control-label" for="inputSuccess">Success!</label>
+			<div class="col-sm-10"><input class="form-control" id="inputSuccess"></div>
+		</div>
+		<div class="form-group has-warning">
+			<label class="col-sm-2 control-label" for="inputWarning">Warning!</label>
+			<div class="col-sm-10"><input class="form-control" id="inputWarning"></div>
+		</div>
+		<div class="form-group has-error">
+			<label class="col-sm-2 control-label" for="inputError">Error!</label>
+			<div class="col-sm-10"><input class="form-control" id="inputError"></div>
+		</div>
+	</form>
+
+	<hr>
+
+	<form role="form">
+		<div class="form-group">
+			<input class="form-control input-lg" type="text" placeholder=".INPUT-LG Large font">
+		</div>
+		<div class="form-group">
+			<input class="form-control" type="text" placeholder="Normal font">
+		</div>
+		<div class="form-group">
+			<input class="form-control input-sm" type="text" placeholder=".INPUT-SM Small font">
+		</div>
+		<div class="form-group">
+			<select class="form-control input-lg">
+				<option>Large A</option>
+				<option>Large B</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<select class="form-control">
+				<option>Normal A</option>
+				<option>Normal B</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<select class="form-control input-sm">
+				<option>Small A</option>
+				<option>Small B</option>
+			</select>
+		</div>
+		<div class="row">
+			<div class="col-lg-2">
+				<input type="text" class="form-control" placeholder=".col-lg-2">
+			</div>
+			<div class="col-lg-1">
+				<input type="text" class="form-control" placeholder=".col-lg-1">
+			</div>
+			<div class="col-lg-1">
+				<input type="text" class="form-control" placeholder=".col-lg-1">
+			</div>
+		</div>
+	</form>
+
+	<form role="form">
+    	<span>帮助文本实例</span>
+    		<input class="form-control" type="text" placeholder="">
+    	<span class="help-block">一个较长的帮助文本块，超过一行，
+        	需要扩展到下一行。本实例中的帮助文本总共有两行。</span>
+	</form>
+
+	<div class="container">
+		<ul class="pager">
+			<li class="previous"><a href="grib4.html">Previous</a></li>
+			<li class="next"><a href="table.html">Next</a></li>
+		</ul>
+	</div>
+
+</body>
+</html>
